@@ -18,24 +18,20 @@ If you have just cloned this repository to start a new project:
 
 1.  **Initialize Directory Structure**:
     ```bash
-    python3 scripts/tasks.py init
     ```
     This will create the `docs/` hierarchy and ensure all necessary configuration files are in place.
 
 2.  **Create Your First Task**:
     ```bash
-    python3 scripts/tasks.py create foundation "Initial Project Setup"
     ```
 
 3.  **Install Pre-Commit Hooks** (Optional but Recommended):
     ```bash
-    python3 scripts/tasks.py install-hooks
     ```
     This ensures task validity before every commit.
 
 ### 2. Workflow
 
-The core workflow is centered around `scripts/tasks.py` (or the `./scripts/tasks` wrapper).
 
 *   **List Tasks**: `./scripts/tasks list`
 *   **Create Task**: `./scripts/tasks create features "New Feature"`
@@ -53,7 +49,6 @@ Refer to [AGENTS.md](AGENTS.md) for detailed operational instructions. This file
 *   `docs/tasks/`: Active and completed tasks.
 *   `docs/memories/`: Long-term project context.
 *   `docs/architecture/`: System design documentation.
-*   `scripts/`: Automation tools (`tasks.py`, `memory.py`, `bootstrap.py`).
 *   `templates/`: Templates for tasks and guides.
 
 ## Maintenance

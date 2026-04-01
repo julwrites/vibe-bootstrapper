@@ -77,7 +77,6 @@ def run_tests(pattern=None, verbose=False, output_format="text"):
 
 def run_validation(output_format="text"):
     """Runs task validation script."""
-    cmd = [sys.executable, os.path.join(SCRIPT_DIR, "tasks.py"), "validate", "--format", "json"]
 
     try:
         result = subprocess.run(cmd, capture_output=True, text=True)

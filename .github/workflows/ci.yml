@@ -22,7 +22,6 @@ jobs:
       run: python3 -m unittest discover tests
 
     - name: Validate Tasks
-      run: python3 scripts/tasks.py validate
 
   automerge:
     needs: test
