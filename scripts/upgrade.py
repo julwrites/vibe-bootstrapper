@@ -6,7 +6,6 @@ import subprocess
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
-TASKS_SCRIPT = os.path.join(SCRIPT_DIR, "tasks.py")
 
 def upgrade():
     print("Starting repository upgrade...")

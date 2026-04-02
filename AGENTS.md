@@ -9,31 +9,22 @@ You are an expert Software Engineer working on this project. Your primary respon
 To improve feature completeness, this repository integrates a sequence of rigorous software engineering workflows known as the "Superpowers":
 - **Brainstorming:** `python3 scripts/design.py brainstorm --title "Feature" ...`
 - **Workspace Setup:** `python3 scripts/workspace.py setup [TASK_ID]`
-- **Micro Planning:** `scripts/tasks.py breakdown [TASK_ID]`
 - **TDD Enforcement:** `python3 scripts/tdd.py state`, `python3 scripts/tdd.py run`, `python3 scripts/tdd.py reset`
-- **Orchestration:** `python3 scripts/orchestrator.py run`, `python3 scripts/orchestrator.py assign`, `python3 scripts/orchestrator.py monitor`
 - **Local Review:** Pre-PR automated review via `scripts/review.py`
 
 ## Workflow
-1.  **Pick a Task**: Run `python3 scripts/tasks.py next` to find the best task, `context` to see active tasks, or `list` to see pending ones.
 2.  **Plan & Document**:
-    *   **Memory Check**: Run `python3 scripts/memory.py list` (or use the Memory Skill) to recall relevant long-term information.
     *   **Security Check**: Ask the user about specific security considerations for this task.
-    *   If starting a new task, use `scripts/tasks.py create` (or `python3 scripts/tasks.py create`) to generate a new task file.
-    *   Update the task status: `python3 scripts/tasks.py update [TASK_ID] in_progress`.
 3.  **Implement**: Write code, run tests.
 4.  **Update Documentation Loop**:
     *   As you complete sub-tasks, check them off in the task document.
     *   If you hit a blocker, update status to `wip_blocked` and describe the issue in the file.
     *   Record key architectural decisions in the task document.
-    *   **Memory Update**: If you learn something valuable for the long term, use `scripts/memory.py create` to record it.
 5.  **Review & Verify**:
     *   **Quality Check**: Run `python3 scripts/quality.py verify` to ensure tests and validation pass. **Do not request review if this fails.**
-    *   Once implementation is complete, update status to `review_requested`: `python3 scripts/tasks.py update [TASK_ID] review_requested`.
     *   Ask a human or another agent to review the code.
     *   Once approved and tested, update status to `verified`.
 6.  **Finalize**:
-    *   Update status to `completed`: `python3 scripts/tasks.py update [TASK_ID] completed`.
     *   Record actual effort in the file.
     *   Ensure all acceptance criteria are met.
 
@@ -46,7 +37,6 @@ To improve feature completeness, this repository integrates a sequence of rigoro
 *   **Context**: `./scripts/tasks context`
 *   **Update**: `./scripts/tasks update [ID] [status]`
 *   **Migrate**: `./scripts/tasks migrate` (Migrate legacy tasks to new format)
-*   **Memory**: `./scripts/memory.py [create|list|read]`
 *   **JSON Output**: Add `--format json` to any command for machine parsing.
 
 ## Documentation Reference
@@ -64,7 +54,6 @@ To improve feature completeness, this repository integrates a sequence of rigoro
 When performing a PR review, follow this "Human-in-the-loop" process to ensure depth and efficiency.
 
 ### 1. Preparation
-1.  **Create Task**: `python3 scripts/tasks.py create review "Review PR #<N>: <Title>"`
 2.  **Fetch Details**: Use `gh` to get the PR context.
     *   `gh pr view <N>`
     *   `gh pr diff <N>`

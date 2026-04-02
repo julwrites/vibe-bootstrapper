@@ -3,7 +3,6 @@
 Brainstorming skill backing script.
 Prompts the user with questions to refine the design before coding.
 Generates a design document in docs/architecture/ or docs/features/.
-Creates an Epic task via scripts/tasks.py.
 """
 
 import os
