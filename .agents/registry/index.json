@@ -1,0 +1,12 @@
+[
+  {
+    "name": "caveman",
+    "repository": "https://github.com/JuliusBrussee/caveman",
+    "description": "A Claude Code skill that cuts 65% of tokens by talking like a caveman."
+  },
+  {
+    "name": "superpowers",
+    "repository": "https://github.com/obra/superpowers",
+    "description": "A complete software development workflow for your coding agents."
+  }
+]
